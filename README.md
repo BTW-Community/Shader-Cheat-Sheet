@@ -4,28 +4,31 @@
 
 There are 22 programs available in the mod (`0` being `None`).
 Each can have a `.vsh` Vertex Shader and a `.fsh` Fragment Shader.
+Any program that doesn't have a Vertex Shader and/or a Fragment Shader will fall back to its backup program, which will fall back to its backup program until a Vertex and/or Fragment Shader are found or it reaches `None`.
 
-1. `gbuffers_basic`
-2. `gbuffers_textured`
-3. `gbuffers_textured_lit`
-4. `gbuffers_skybasic`
-5. `gbuffers_skytextured`
-6. `gbuffers_terrain`
-7. `gbuffers_water`
-8. `gbuffers_entities`
-9. `gbuffers_spidereyes`
-10. `gbuffers_hand`
-11. `gbuffers_weather`
-12. `composite`
-13. `composite1`
-14. `composite2`
-15. `composite3`
-16. `composite4`
-17. `composite5`
-18. `composite6`
-19. `composite7`
-20. `final`
-21. `shadow`
+|	Program #	|	Program Name			|	Backup Program			|
+|	---			|	---						|	---						|
+|	1 			|	`gbuffers_basic`		|	`None`					|
+|	2			|	`gbuffers_textured`		|	`gbuffers_basic`		|
+|	3 			|	`gbuffers_textured_lit`	|	`gbuffers_textured`		|
+|	4 			|	`gbuffers_skybasic`		|	`gbuffers_basic`		|
+|	5 			|	`gbuffers_skytextured`	|	`gbuffers_textured`		|
+|	6 			|	`gbuffers_terrain`		|	`gbuffers_textured_lit`	|
+|	7 			|	`gbuffers_water`		|	`gbuffers_terrain`		|
+|	8 			|	`gbuffers_entities`		|	`gbuffers_textured_lit`	|
+|	9 			|	`gbuffers_spidereyes`	|	`gbuffers_textured`		|
+|	10 			|	`gbuffers_hand`			|	`gbuffers_textured_lit`	|	
+|	11 			|	`gbuffers_weather`		|	`gbuffers_textured_lit`	|
+|	12 			|	`composite`				|	`None`					|
+|	13 			|	`composite1`			|	`None`					|
+|	14 			|	`composite2`			|	`None`					|
+|	15 			|	`composite3`			|	`None`					|
+|	16	 		|	`composite4`			|	`None`					|
+|	17 			|	`composite5`			|	`None`					|
+|	18 			|	`composite6`			|	`None`					|
+|	19	 		|	`composite7`			|	`None`					|
+|	20			|	`final`					|	`None`					|
+|	21			|	`shadow`				|	`None`					|
 
 ## Available Data
 
